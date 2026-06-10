@@ -25,9 +25,9 @@ const CONFIG = {
   messages: {
     // Typed out line-by-line on the opening screen
     intro: [
-      "lose some weight, andrew...",
       "wazzzzzzzzzup has a message for you.",
-      "happy birthday.",
+      "lose some weight, andrew...",
+      "and, happy birthday.",
       "before you stands a choice. three pills.",
     ],
     introHint: "// you may return. the construct remembers.",
