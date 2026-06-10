@@ -25,11 +25,10 @@ const CONFIG = {
   messages: {
     // Typed out line-by-line on the opening screen
     intro: [
-      "wake up, andrew...",
-      "the construct has a message for you.",
+      "lose some weight, andrew...",
+      "wazzzzzzzzzup has a message for you.",
       "happy birthday.",
       "before you stands a choice. three pills.",
-      "i can only show you the door. you have to pick the gift."
     ],
     introHint: "// you may return. the construct remembers.",
 
@@ -48,11 +47,10 @@ const CONFIG = {
     // Final locked-in screen
     lockedTitle: "choice_locked.",
     lockedBody:
-      "good pick. screenshot this screen and send it to me, " +
-      "or hit transmit below. the construct will handle the rest.",
+      "good pick. text it to me, " +
+      "or hit transmit below.",
     birthdayNote:
-      "happy birthday, andrew. whichever pill you picked, " +
-      "it was the right one. — see you on the other side.",
+      "happy birthday, andrew",
     transmitLabel: "> transmit choice",
     changeMindLabel: "> change my mind"
   },
@@ -76,9 +74,9 @@ const CONFIG = {
         { name: "UA Monsters Godzilla 1962 — Mt. Fuji", price: "$379.00",
           img: "https://godzilla.com/cdn/shop/files/4535123847257_1.jpg?v=1759199504&width=480",
           link: "https://godzilla.com/collections/figures/products/ua-monsters-godzilla-1962-battle-at-the-foot-of-mount-fuji-ver" },
-        { name: "Godzilla x Frozen Culture B&W Set", price: "$45.00",
-          img: "https://godzilla.com/cdn/shop/files/G2688-47_1.jpg?v=1760059751&width=480",
-          link: "https://godzilla.com/collections/figures/products/godzilla-x-frozen-culture-b-w-figure-set" },
+        { name: "Godzilla Minus One Blu-ray Deluxe Japan Collector's Edition", price: "$65.00",
+          img: "https://godzilla.com/cdn/shop/files/G23DVD64389_1.jpg?v=1762199113&width=480",
+          link: "https://godzilla.com/collections/all/products/godzilla-minus-one-blu-ray-deluxe-japan-collectors-edition" },
         { name: "Soft Vinylife Hedorah (glow-in-the-dark)", price: "$94.00",
           img: "https://godzilla.com/cdn/shop/files/G2622-106_1_a894293c-c078-4662-ac2d-c5a1e55138de.jpg?v=1780608977&width=480",
           link: "https://godzilla.com/collections/figures/products/soft-vinylife-hedorah-candy-case-green-gitd-ver-figure" },
