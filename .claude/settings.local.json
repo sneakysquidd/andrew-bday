@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__visualize__read_me",
+      "mcp__visualize__show_widget",
+      "WebFetch(domain:godzilla.com)",
+      "WebFetch(domain:baturina-homewear.com)",
+      "WebFetch(domain:www.usa.philips.com)",
+      "WebFetch(domain:byloftie.com)",
+      "PowerShell(curl.exe -s -L --max-redirs 15 -A \"Mozilla/5.0 \\(Windows NT 10.0; Win64; x64\\) AppleWebKit/537.36 \\(KHTML, like Gecko\\) Chrome/126.0 Safari/537.36\" -c \"$env:TEMP\\\\bat_cookies.txt\" -b \"$env:TEMP\\\\bat_cookies.txt\" -w \"HTTP_STATUS:%{http_code}\" \"https://baturina-homewear.com/product-category/robes/\" -o \"$env:TEMP\\\\baturina_robes.html\"; Get-Item \"$env:TEMP\\\\baturina_robes.html\" | Select-Object Length)",
+      "PowerShell($html = Get-Content \"$env:TEMP\\\\baturina_robes.html\" -Raw; $links = [regex]::Matches\\($html, 'href=\"\\(https://baturina-homewear\\\\.com/product/[^\"]+\\)\"'\\) | ForEach-Object { $_.Groups[1].Value } | Select-Object -Unique; $links; \"---IMG SAMPLE---\"; $imgs = [regex]::Matches\\($html, '<img[^>]+\\(src=\"https://baturina-homewear\\\\.com/wp-content/uploads/[^\"]+\"\\)'\\) | ForEach-Object { $_.Groups[1].Value } | Select-Object -Unique -First 12; $imgs)",
+      "PowerShell($html = Get-Content \"$env:TEMP\\\\baturina_robes.html\" -Raw; $idx = $html.IndexOf\\('mens-dressing-gown-black-medallion'\\); $chunk = $html.Substring\\([Math]::Max\\(0,$idx-3000\\), 5000\\); $chunk -replace '><', \">`n<\" | Select-String -Pattern 'data-src|woocommerce-loop|price|<h2|<img|lazy' -SimpleMatch:$false | Select-Object -First 30)"
+    ]
+  }
+}

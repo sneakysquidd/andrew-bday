@@ -1,0 +1,171 @@
+/* ===== tailored plaid / gentleman's atelier ===== */
+.screen-robe {
+  background-color: #f4efe2;
+  color: #1f3327;
+  font-family: "EB Garamond", serif;
+  display: flex;
+  flex-direction: column;
+}
+
+/* woven tartan bands */
+.rb-tartan-band {
+  height: 44px;
+  flex-shrink: 0;
+  background-color: #2e4736;
+  background-image:
+    repeating-linear-gradient(90deg,
+      rgba(34, 52, 77, 0.9) 0 26px, transparent 26px 52px,
+      rgba(122, 40, 40, 0.85) 52px 58px, transparent 58px 104px),
+    repeating-linear-gradient(0deg,
+      rgba(34, 52, 77, 0.55) 0 12px, transparent 12px 24px,
+      rgba(176, 141, 74, 0.5) 24px 27px, transparent 27px 48px),
+    repeating-linear-gradient(45deg,
+      rgba(244, 239, 226, 0.07) 0 2px, transparent 2px 4px);
+  border-bottom: 2px solid #b08d4a;
+}
+.rb-band-bottom { border-bottom: none; border-top: 2px solid #b08d4a; }
+
+.rb-body {
+  flex: 1;
+  width: 100%;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 3.5rem 1.5rem 1rem;
+  text-align: center;
+}
+
+.rb-eyebrow {
+  font-variant: small-caps;
+  letter-spacing: 0.32em;
+  font-size: 0.95rem;
+  color: #6e2b2b;
+}
+
+/* wax seal */
+.rb-seal {
+  width: 74px;
+  height: 74px;
+  margin: 1.6rem auto 1.4rem;
+  border-radius: 50%;
+  background: radial-gradient(circle at 36% 30%, #8a3939 0%, #6e2b2b 55%, #4d1c1c 100%);
+  box-shadow: 0 3px 10px rgba(60, 30, 20, 0.35), inset 0 0 0 3px rgba(244, 239, 226, 0.18);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.rb-seal span {
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 2.1rem;
+  color: #f4efe2;
+  text-shadow: 0 1px 2px rgba(50, 20, 15, 0.6);
+}
+
+.rb-title {
+  font-family: "Playfair Display", serif;
+  font-weight: 600;
+  font-size: clamp(2rem, 5.5vw, 3.1rem);
+  letter-spacing: 0.01em;
+  color: #1f3327;
+}
+.rb-rule { color: #b08d4a; font-size: 1.5rem; margin: 0.9rem 0; }
+
+.rb-prize {
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  font-size: clamp(1.15rem, 3vw, 1.45rem);
+  color: #6e2b2b;
+}
+.rb-blurb {
+  max-width: 540px;
+  margin: 1.1rem auto 2.8rem;
+  font-size: 1.15rem;
+  line-height: 1.65;
+  color: #44574a;
+}
+
+/* framed robe cards */
+.rb-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 28px;
+  text-align: left;
+}
+.rb-card {
+  display: flex;
+  flex-direction: column;
+  background: #fdfaf2;
+  border: 1px solid #c4ad7c;
+  outline: 1px solid #c4ad7c;
+  outline-offset: 4px;
+  padding: 10px;
+  text-decoration: none;
+  transition: transform 260ms ease, box-shadow 260ms ease, outline-color 260ms ease;
+  margin: 5px;
+}
+.rb-card:hover, .rb-card:focus-visible {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 34px rgba(46, 71, 54, 0.22);
+  outline-color: #8a6d3b;
+}
+.rb-card-img { overflow: hidden; aspect-ratio: 2 / 3; background: #ece5d2; }
+.rb-card-img img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: transform 600ms ease;
+}
+.rb-card:hover .rb-card-img img { transform: scale(1.045); }
+.rb-card-info { padding: 14px 8px 8px; }
+.rb-card-name {
+  font-family: "Playfair Display", serif;
+  font-size: 1.08rem;
+  font-weight: 500;
+  line-height: 1.35;
+  color: #1f3327;
+}
+.rb-card-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-top: 8px;
+  gap: 8px;
+}
+.rb-card-price { font-size: 1.05rem; color: #6e2b2b; font-variant-numeric: oldstyle-nums; }
+.rb-card-cta {
+  font-variant: small-caps;
+  letter-spacing: 0.14em;
+  font-size: 0.85rem;
+  color: #8a6d3b;
+}
+.rb-card:hover .rb-card-cta { text-decoration: underline; text-underline-offset: 3px; }
+
+.rb-store-link { margin: 2.6rem 0 0; }
+.rb-store-link a {
+  font-variant: small-caps;
+  letter-spacing: 0.22em;
+  font-size: 1.05rem;
+  color: #2e4736;
+  text-decoration: none;
+  border-bottom: 1px solid #b08d4a;
+  padding-bottom: 4px;
+  transition: color 200ms ease;
+}
+.rb-store-link a:hover { color: #6e2b2b; }
+.rb-store-link a::after { content: " ↗"; color: #b08d4a; }
+
+/* certificate buttons */
+.rb-btn {
+  font-family: "Playfair Display", serif;
+  font-variant: small-caps;
+  letter-spacing: 0.16em;
+  font-size: 1.05rem;
+  color: #1f3327;
+  background: #fdfaf2;
+  border: 3px double #2e4736;
+  padding: 0.8rem 1.8rem;
+  transition: background 200ms ease, color 200ms ease, border-color 200ms ease;
+}
+.rb-btn:hover, .rb-btn:focus-visible { background: #2e4736; color: #f4efe2; }
+.rb-btn-claim { border-color: #6e2b2b; color: #6e2b2b; }
+.rb-btn-claim:hover, .rb-btn-claim:focus-visible { background: #6e2b2b; color: #f4efe2; border-color: #6e2b2b; }
